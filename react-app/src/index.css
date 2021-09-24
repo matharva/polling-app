@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #582fee 0%, #69bada);
+}
+.about-us-lahi-logo {
+  width: 200px;
+}
+.get-map-working {
+  /* margin-left: 5rem; */
+  margin: 0 auto;
+}
+#google_translate_element {
+  position: relative;
+}
+.img-grid-individual-image {
+  height: 150px;
+  object-fit: cover;
+}
+.time {
+  font-size: 32px;
+}
+.timer-app {
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
