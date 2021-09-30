@@ -7,6 +7,9 @@ const McqPoll = () => {
     option1: "",
     option2: "",
     option3: "",
+    option1Count: 0,
+    option2Count: 0,
+    option3Count: 0,
     correctAnswer: "",
   });
   function handleSubmit(e) {
@@ -22,6 +25,9 @@ const McqPoll = () => {
       option1: "",
       option2: "",
       option3: "",
+      option1Count: 0,
+      option2Count: 0,
+      option3Count: 0,
       correctAnswer: "",
     });
   }

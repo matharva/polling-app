@@ -11,6 +11,7 @@ const usePolls = (collection) => {
       .orderBy("createdAt", "desc")
       .onSnapshot((snapshot) => {
         let documents = [];
+        console.log("SnapShot from usePoll", snapshot)
         snapshot.forEach((doc) => {
           if (doc.exists) {
             documents.push({ ...doc.data(), id: doc.id });

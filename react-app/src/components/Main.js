@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, useHistory } from "react-router-dom";
 import Dashboard from "./authentication/Dashboard";
 import PrivateRoute from "./authentication/PrivateRoute";
 import Navbar from "./navbar/Navbar";
@@ -12,6 +12,11 @@ import ImgUpload from "./img-upload/ImgUpload";
 
 const Main = () => {
   const [isSideBarOpen, setIsSideBarOpen] = useState(true);
+  const history = useHistory();
+
+  useEffect(() => {
+    history.push("/main/poll")
+  }, [])
   return (
     <div>
       <Router>
