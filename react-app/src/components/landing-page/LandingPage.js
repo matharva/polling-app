@@ -9,8 +9,8 @@ import LandingNavbar from "./LandingNavbar";
 const LandingPage = () => {
   const history = useHistory();
   useEffect(() => {
-    history.push("/main/poll")
-  }, [])
+    history.push("/signup");
+  }, []);
   return (
     <div>
       <LandingNavbar />

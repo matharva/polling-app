@@ -9,6 +9,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "autoprefixer": "^9.8.6",
+    "axios": "^0.24.0",
     "firebase": "^8.7.1",
     "firebase-tools": "^9.18.0",
     "postcss": "^8.3.5",
@@ -24,7 +25,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3002 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -13,7 +13,8 @@ const navigation = [
   // { name: "Dashboard", href: "/main", current: false },
   { name: "Polls", href: "/main/poll", current: false },
   { name: "Add Polls", href: "/main/add-poll", current: false },
-  { name: "Schedule Polls", href: "/main/schedule", current: false },
+  { name: "Posts", href: "/main/posts", current: false },
+  { name: "Mashup", href: "/main/mashup", current: false },
   { name: "Images", href: "/main/image", current: false },
   // { name: "Update Profile", href: "/main/update-profile", current: false },
 ];
@@ -40,7 +41,6 @@ const Navbar = () => {
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
-          {console.log(currentUser)}
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

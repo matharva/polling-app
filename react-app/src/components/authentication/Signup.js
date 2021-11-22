@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 import { StyledFirebaseAuth } from "react-firebaseui";
 import "./index-auth.css";
 import firebase from "firebase";
+import axios from "axios";
 const Signup = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -17,7 +18,26 @@ const Signup = () => {
     signInFlow: "popup",
     signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
-      signInSuccessWithAuthResult: () => {
+      signInSuccessWithAuthResult: async (data) => {
+        console.log(
+          "Data from firebase: ",
+          data.user.displayName,
+          data.user.email
+        );
+
+        const userDetails = {
+          name: data.user.displayName,
+          email: data.user.email,
+        };
+        const userdata = await axios.post(
+          "http://localhost:8000/getTokens",
+          userDetails
+        );
+        const accessToken = userdata.data.accessToken;
+        const refreshToken = userdata.data.refreshToken;
+        localStorage.setItem("accessToken", accessToken);
+        localStorage.setItem("refreshToken", refreshToken);
+        console.log("access token: ", accessToken);
         history.push("/main/poll");
       },
     },

@@ -3,13 +3,13 @@ import SpeechText from "./SpeechText";
 import ImageUpload from "./ImageUpload";
 import usePolls from "../../hooks/usePolls";
 import McqComp from "./McqComp";
-import "./Poll.css"
+import "./Poll.css";
 const Poll = () => {
   const { polls } = usePolls("poll");
   console.log(polls);
   const latestPoll = polls[0];
   console.log(latestPoll);
-  
+
   return (
     <div>
       <header className="bg-white shadow">
@@ -24,8 +24,8 @@ const Poll = () => {
             {(() => {
               if (latestPoll && latestPoll.type === "mcq")
                 return <McqComp latestPoll={latestPoll} />;
-              if (latestPoll && latestPoll.type === "brief")
-                return <SpeechText latestPoll={latestPoll} />;
+              if (latestPoll && latestPoll.type === "brief") return;
+              // return <SpeechText latestPoll={latestPoll} />;
               if (latestPoll && latestPoll.type === "image")
                 return <ImageUpload latestPoll={latestPoll} />;
               else console.log("In valid question type");
@@ -41,9 +41,7 @@ const Poll = () => {
           </div>
           {/* /End replace */}
         </div>
-        
       </main>
-      
     </div>
   );
 };
